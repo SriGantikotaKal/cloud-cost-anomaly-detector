@@ -1,16 +1,44 @@
 # Cloud Cost Anomaly Detector
 
-A Python cost-monitoring utility that flags unusual service spend using rolling baselines. It is aimed at cloud platform, infrastructure, and FinOps teams that need fast explanations for cost spikes.
+[![Python tests](https://github.com/SriGantikotaKal/cloud-cost-anomaly-detector/actions/workflows/python-tests.yml/badge.svg)](https://github.com/SriGantikotaKal/cloud-cost-anomaly-detector/actions/workflows/python-tests.yml)
 
-## Highlights
+A rolling-baseline anomaly detector for cloud spend. It flags service-level cost spikes using absolute delta and percentage growth thresholds, then ranks anomalies for engineering review.
 
-- Builds rolling spend baselines per service
-- Flags spikes by absolute delta and percentage growth
-- Returns ranked anomaly explanations for engineering review
+## Why recruiters should care
 
-## Run
+This fits cloud platform, infrastructure, reliability, and FinOps teams at companies running high-scale services where cost, performance, and reliability have to be managed together.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A[Daily service costs] --> B[Group by service]
+    B --> C[Rolling baseline]
+    C --> D[Delta and growth checks]
+    D --> E[Ranked anomalies]
+    E --> F[Engineering review]
+```
+
+## Run tests
 
 ```powershell
 python -m unittest discover -s tests
 ```
 
+## Run the demo
+
+```powershell
+python -m src.cli samples/sample.json
+```
+
+## Design decisions
+
+- Combines absolute and relative thresholds to reduce noisy alerts.
+- Ranks by dollar impact so engineers can triage high-value issues first.
+- Uses simple rolling averages for transparent investigation handoffs.
+
+## Roadmap
+
+- Add service-owner routing.
+- Add weekday/weekend baseline separation.
+- Export anomaly summaries to CSV or dashboard-ready JSON.

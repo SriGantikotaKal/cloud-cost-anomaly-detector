@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "service": "compute",
+      "date": "2026-09-01",
+      "cost_usd": 100
+    },
+    {
+      "service": "compute",
+      "date": "2026-09-02",
+      "cost_usd": 100
+    },
+    {
+      "service": "compute",
+      "date": "2026-09-03",
+      "cost_usd": 100
+    },
+    {
+      "service": "compute",
+      "date": "2026-09-04",
+      "cost_usd": 100
+    },
+    {
+      "service": "compute",
+      "date": "2026-09-05",
+      "cost_usd": 100
+    },
+    {
+      "service": "compute",
+      "date": "2026-09-06",
+      "cost_usd": 100
+    },
+    {
+      "service": "compute",
+      "date": "2026-09-07",
+      "cost_usd": 100
+    },
+    {
+      "service": "compute",
+      "date": "2026-09-08",
+      "cost_usd": 280
+    },
+    {
+      "service": "storage",
+      "date": "2026-09-08",
+      "cost_usd": 62
+    }
+  ]
+}
