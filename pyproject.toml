@@ -1,0 +1,6 @@
+[project]
+name = "cloud-cost-anomaly-detector"
+version = "0.1.0"
+description = "Rolling-baseline cloud spend anomaly detection with explainable output."
+requires-python = ">=3.10"
+
